@@ -81,7 +81,7 @@ class Employe extends CI_Controller
         $data['title'] = "Présence Employée";
         $data['content'] = "employe/details_presence";
         $data['action'] = $this->Employee_model->get_dernier_action_presence($idemp);
-        $data['employe'] = $this->Employee_model->getEmploye($idemp);
+        $data['employe'] = $this->Employee_model->findEmp($idemp);
         $data['vola'] = $this->Employee_model->salaire_Mois_heure($idemp, (int)$currentMonth, (int)$currentYear);
         $data['vola']['tempstravail'] = $this->Employee_model->formatHour($data['vola']['tempstravail']);
         $data['temps'] = $this->Employee_model->temps_jour_heure_emp($idemp, $currentMonth, $currentYear);
