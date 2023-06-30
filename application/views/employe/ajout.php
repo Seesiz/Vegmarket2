@@ -58,6 +58,7 @@
     .today {
         background-color: grey;
     }
+    
 </style>
 <div class="p-1">
     <h3>Ajout d'employé</h3>
@@ -79,7 +80,7 @@
             </div>
             <div class="card mb-2 rb-5">
                 <h5>Commentaire:</h5>
-                <textarea name="commentaire" id="" cols="30" rows="5" style="resize: none"></textarea>
+                <textarea name="commentaire" id="txtA" cols="30" rows="5" style="resize: none;"></textarea>
             </div>
             <div class="mb-2 rb-5 d-flex submit">
                 <button type="submit" class="card mb-2 rb-5 btn-5"><i class="fa-solid fa-check"></i></button>
