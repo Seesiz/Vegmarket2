@@ -58,9 +58,9 @@ class Employe extends CI_Controller
     }
 
 
-    public function deleteEmployee()
+    public function deleteEmployee($id_Emp)
     {
-        $this->Employee_model->deletEmp($_POST['idemp']);
+        $this->Employee_model->deletEmp($id_Emp);
         redirect(site_url('Employe/AjoutEmploye'));
     }
 
@@ -73,7 +73,7 @@ class Employe extends CI_Controller
         $this->load->view('components/body', $data);
     }
 
-    public function SalaireEmploye()
+    public function salaireEmploye()
     {
         $data['title'] = "Présence Employées";
         $data['content'] = "employe/salaire";
@@ -89,7 +89,7 @@ class Employe extends CI_Controller
         $data['title'] = "Présence Employée";
         $data['content'] = "employe/details_presence";
         $data['action'] = $this->Employee_model->get_dernier_action_presence($idemp);
-        $data['employe'] = $this->Employee_model->getEmploye($idemp);
+        $data['employe'] = $this->Employee_model->findEmp($idemp);
         $data['vola'] = $this->Employee_model->salaire_Mois_heure($idemp, (int)$currentMonth, (int)$currentYear);
         $data['vola']['tempstravail'] = $this->Employee_model->formatHour($data['vola']['tempstravail']);
         $data['temps'] = $this->Employee_model->temps_jour_heure_emp($idemp, $currentMonth, $currentYear);

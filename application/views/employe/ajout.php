@@ -144,7 +144,7 @@
                     <td class="col-2"><?php echo $personne['dateembauche'] ?></td>
                     <td class="col-2"><?php echo $personne['libelle'] ?></td>
                     <td class="col-4"><?php echo $personne['nom'] ?> <?php echo $personne['prenomemploye'] ?></td>
-                    <td class="col-2 d-flex gap-2"><a href="<?php  echo site_url('Employe/ModifEmp/'.$personne['id_emp']); ?>" class="btn-4 link"><i class="fa-solid fa-pen" style="color:white; font-size:14px;"></i></a> <a href="#" class="btn-2 link"><i class="fa-solid fa-trash" style="color:white; font-size:14px;"></i></a></td>
+                    <td class="col-2 d-flex gap-2"><a href="<?php  echo site_url('Employe/ModifEmp/'.$personne['id_emp']); ?>" class="btn-4 link"><i class="fa-solid fa-pen" style="color:white; font-size:14px;"></i></a> <a href="<?php echo site_url('Employe/deleteEmployee/'.$personne['id_emp']);?>" class="btn-2 link"><i class="fa-solid fa-trash" style="color:white; font-size:14px;"></i></a></td>
                 </tr>
             <?php } ?>
 
