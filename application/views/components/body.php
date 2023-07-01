@@ -87,7 +87,7 @@
                             <a href="<?php echo site_url("Employe/PresenceEmploye") ?>"><i class="fa-regular fa-circle"></i> Présence</a>
                         </li>
                         <li class="item">
-                            <a href="#"><i class="fa-regular fa-circle"></i> Salaire</a>
+                            <a href="<?php echo site_url("Employe/salaireEmploye") ?>"><i class="fa-regular fa-circle"></i> Salaire</a>
                         </li>
                     </ul>
                 </li>

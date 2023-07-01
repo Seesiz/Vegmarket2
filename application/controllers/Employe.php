@@ -73,6 +73,14 @@ class Employe extends CI_Controller
         $this->load->view('components/body', $data);
     }
 
+    public function salaireEmploye()
+    {
+        $data['title'] = "Présence Employées";
+        $data['content'] = "employe/salaire";
+        $data['employes'] = $this->Employee_model->getAllEmp();
+        $this->load->view('components/body', $data);
+    }
+
     public function details_presence($idemp)
     {
         $currentMonth = 6; // Current month as a number between 1 and 12
