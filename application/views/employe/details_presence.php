@@ -23,7 +23,7 @@
     <div class="card">
         <div class="row info">
             <div class="col-10 mb-2 d-flex align-items-center">
-                <h4 class="me-4">Detail pour <span class="nom"><?php echo $employe[0]['nom'] ?> <?php echo $employe[0]['prenomemploye'] ?></h4></span>
+                <h4 class="me-4">Detail pour <span class="nom"><?php echo $employe['nom'] ?> <?php echo $employe['prenomemploye'] ?></h4></span>
             </div>
             <div class="photo">
                 <img src="<?php echo base_url('assets/img/user.png') ?>" alt="">
@@ -37,7 +37,7 @@
         </div>
         <div>
             <div class="filtre_date">
-                <form data-cheminsalaire="<?php echo base_url("Employe/async_details_presence/" . $employe[0]['id_emp']) ?>" data-chemintemps="<?php echo base_url("Employe/async_temps_jour_heure_emp/" . $employe[0]['id_emp']) ?>" class="filtre_temps" method="POST">
+                <form data-cheminsalaire="<?php echo base_url("Employe/async_details_presence/" . $employe['id_emp']) ?>" data-chemintemps="<?php echo base_url("Employe/async_temps_jour_heure_emp/" . $employe['id_emp']) ?>" class="filtre_temps" method="POST">
                     <label for="mois">Mois :</label>
                     <select name="mois" id="mois">
                         <option value="1">Janvier</option>
