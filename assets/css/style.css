@@ -655,7 +655,7 @@ label {
 }
 
 #calendar th {
-    background: #91c8eb;
+    background:var(--secondary);
 
 }
 
