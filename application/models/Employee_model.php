@@ -30,13 +30,7 @@ class Employee_model extends CI_Model
         $this->db->from("infoemp");
         return $this->db->get()->result_array();
     }
-    public function getEmploye($idEmp)
-    {
-        $this->db->select('*');
-        $this->db->where('id_emp', $idEmp);
-        $this->db->from("employe");
-        return $this->db->get()->row_array();
-    }
+
 
 
     public function getEmploye($idEmp)
@@ -54,18 +48,13 @@ class Employee_model extends CI_Model
         return $this->db->get()->result_array();
     }
 
-    public function findEmp($id_emp){
-        $this->db->select('*');
-        $this->db->from("employe");
-        $this->db->where('id_emp',$id_emp); 
-        return $this->db->get()->result_array();
-    }
 
-    public function deletEmp(){
+    public function deletEmp($id_emp){
         $sql = "insert into historiqueEmp (id_emp,dateDepart) values (%s , %s)";
-        $req = sprintf($sql, $this->db->escape($data['id_emp']), $this->db->escape($data['dateDepart']));
+        $req = sprintf($sql, $this->db->escape($id_emp), $this->db->escape(date('Y-m-d')));
         $this->db->query($req);
     }
+
     // -------FALY DEBUT------------------------------
 
     public function get_dernier_action_presence($idEmp)
