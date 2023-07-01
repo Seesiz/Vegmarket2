@@ -300,3 +300,5 @@ GROUP BY jour,mois,annee,E.id_emp,P.dateEntree,P.dateSortie
 ;
 
 create view infoEmp as select E.*,F.libelle from employe E, fonction F where F.id_fonction = E.id_fonction;
+ 
+create view EmpValide as select E.*,F.libelle from employe E, fonction F where f.id_fonction = E.id_fonction and  E.id_emp not in (select id_emp from historiqueEmp);

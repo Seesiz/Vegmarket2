@@ -27,7 +27,7 @@ class Employee_model extends CI_Model
     public function getAllEmp()
     {
         $this->db->select('*');
-        $this->db->from("infoemp");
+        $this->db->from("empvalide");
         return $this->db->get()->result_array();
     }
 
