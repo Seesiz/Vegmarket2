@@ -655,7 +655,7 @@ label {
 }
 
 #calendar th {
-    background: #63aad6de;
+    background: #91c8eb;
 
 }
 
@@ -720,4 +720,28 @@ label {
     border-radius: 5px;
     box-shadow: 0 0 20px rgb(182, 182, 182);
 }
+
+.salaire_temps{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+}
+.payer{
+    padding: 10px 25px;
+    font-weight: bold;
+}
+
+.payer:hover{
+    background:var(--secondary) ;
+}
+
+.interaction{
+    display: flex;
+    /* justify-content: center; */
+    padding-right: 2rem;
+    gap: 1rem;
+}
+
+
+
 

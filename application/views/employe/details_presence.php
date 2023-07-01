@@ -13,7 +13,7 @@
 
     .photo img {
         width: 100%;
-        heigh   : 100%;
+        heigh: 100%;
         object-fit: cover;
     }
 </style>
@@ -64,7 +64,14 @@
             </div>
             <div class="labelH2">Salaire</div>
             <div class="salaire_temps label">
-                <span class="salaire"><?php echo $vola['salairemensuel'] ?>ar</span> pour <span class="temps"><?php echo $vola['tempstravail'] ?> </span> de travail
+                <div>
+                    <span class="salaire"><?php echo $vola['salairemensuel'] ?>ar</span> pour <span class="temps"><?php echo $vola['tempstravail'] ?> </span> de travail
+                </div>
+
+                <form action="">
+                    <input type="submit" value="Payer" class="payer btn-5">
+                </form>
+
             </div>
         </div>
         <!-- temps de travail -->
@@ -103,8 +110,8 @@
     $('#annee').val(currentYear).prop('selected', true);
 
     var selectedMonth = $('#mois').val();
-        $('.labelH2').text('Salaire mois de ' + mois[selectedMonth - 1]);
-        $('.labelH22').text('Presence mois de ' + mois[selectedMonth - 1]);
+    $('.labelH2').text('Salaire mois de ' + mois[selectedMonth - 1]);
+    $('.labelH22').text('Presence mois de ' + mois[selectedMonth - 1]);
 
     var dateEntree = "<?php echo $action['dateentree']; ?>";
     var formatteddateEntree = formatDate(dateEntree);
@@ -114,5 +121,4 @@
     $('.entree_sortie .sortie').text(formatteddatesortie);
 
     charger_details_presecence();
-
 </script>
