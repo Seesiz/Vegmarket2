@@ -39,6 +39,14 @@ class Employee_model extends CI_Model
     }
 
 
+    public function getEmploye($idEmp)
+    {
+        $this->db->select('*');
+        $this->db->where('id_emp', $idEmp);
+        $this->db->from("employe");
+        return $this->db->get()->row_array();
+    }
+
     public function getAllFonction()
     {
         $this->db->select('*');
