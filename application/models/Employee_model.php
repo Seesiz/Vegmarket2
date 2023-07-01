@@ -53,9 +53,9 @@ class Employee_model extends CI_Model
         return $this->db->get()->result_array();
     }
 
-    public function deletEmp(){
+    public function deletEmp($id_emp){
         $sql = "insert into historiqueEmp (id_emp,dateDepart) values (%s , %s)";
-        $req = sprintf($sql, $this->db->escape($data['id_emp']), $this->db->escape($data['dateDepart']));
+        $req = sprintf($sql, $this->db->escape($id_emp) );
         $this->db->query($req);
     }
     // -------FALY DEBUT------------------------------

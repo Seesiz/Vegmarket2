@@ -58,9 +58,9 @@ class Employe extends CI_Controller
     }
 
 
-    public function deleteEmployee()
+    public function deleteEmployee($id_Emp)
     {
-        $this->Employee_model->deletEmp($_POST['idemp']);
+        $this->Employee_model->deletEmp($id_Emp);
         redirect(site_url('Employe/AjoutEmploye'));
     }
 
